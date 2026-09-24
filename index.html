@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nova Beauty Studio | Online Booking (Demo)</title><link rel="stylesheet" href="styles.css"></head><body>
+<header class="top"><div class="brand"><span class="logo">N</span><div>Nova Beauty Studio<small>Online Booking</small></div></div>
+<nav><button data-view="book" class="on">Book</button><button data-view="manage">My Booking</button><button data-view="admin">Admin</button></nav>
+<button id="reset" class="btn ghost sm">Reset Demo Data</button></header>
+<div class="banner">Portfolio demo: no real bookings, emails or AI API. Data lives in your browser (localStorage).</div>
+<main>
+<section id="book" class="view"><div class="cols">
+<div><div id="flow" class="card"><h3>1. Choose a service</h3><div id="svc" class="svcs"></div>
+<h3>2. Pick a date &amp; time</h3><input type="date" id="date"><div id="slots" class="slots"></div>
+<h3>3. Your details</h3><form id="bf"><div class="grid2"><label>Name<input name="name" required></label><label>Phone<input name="phone" type="tel" required></label><label>Email<input name="email" type="email" required></label></div><label>Notes<textarea name="notes" placeholder="Allergies, inspiration, requests..."></textarea></label><p class="err" id="be"></p><button class="btn">Confirm appointment</button></form></div>
+<div id="done" class="card center" hidden></div></div>
+<aside><div class="card"><h3>AI booking assistant</h3><div id="chat" class="chat"></div><form id="cf" class="row"><input id="cq" placeholder="e.g. manicure friday morning"><button class="btn">Send</button></form></div>
+<div class="card"><h3>Summary</h3><div id="sum"></div></div></aside></div></section>
+<section id="manage" class="view" hidden><div class="card narrow"><h3>Manage or cancel your appointment</h3><form id="mf"><label>Appointment ID<input id="mid" placeholder="NBS-XXXXXX" required></label><label>Email or phone used to book<input id="mc" required></label><button class="btn">Find booking</button></form><div id="mres"></div><p class="muted">Tip: open the Admin tab to find a demo ID and email.</p></div></section>
+<section id="admin" class="view" hidden><div class="tabs"><button data-tab="overview">Overview</button><button data-tab="appts">Appointments</button><button data-tab="customers">Customers</button><button data-tab="settings">Settings</button></div><div id="atab"></div></section>
+</main><dialog id="dlg"></dialog><script src="script.js"></script></body></html>
